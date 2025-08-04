@@ -1,3 +1,31 @@
+# 1.17.2 / 2025-06-15
+
+  * Bugfixes
+    * chore(deps): update alpine docker tag to v3.22
+    * chore(deps): update dependency go to v1.24.4
+    * fix(deps): update dependency vue-i18n to v11.1.5
+    * fix(deps): update dependency vue to v3.5.16
+    * fix(deps): update module github.com/redis/go-redis/v9 to v9.10.0
+
+# 1.17.1 / 2025-05-29
+
+  * Bugfixes
+    * fix(deps): update dependency vue-i18n to v11.1.4
+    * fix(deps): update dependency vue to v3.5.15
+    * fix(deps): update module github.com/redis/go-redis/v9 to v9.9.0
+
+# 1.17.0 / 2025-05-12
+
+  * Improvements
+    * Port to Vue3 and TypeScript
+
+  * Bugfixes
+    * Update Go dependencies
+    * Update Node dependencies
+
+  * Translations
+    * Update Polish translation (#213) (Thanks @Icikowski)
+
 # 1.16.0 / 2025-05-01
 
   * New Features
