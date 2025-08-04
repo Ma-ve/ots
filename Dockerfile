@@ -1,4 +1,4 @@
-FROM golang:1-alpine AS builder
+FROM golang:1.24.5-alpine@sha256:daae04ebad0c21149979cd8e9db38f565ecefd8547cf4a591240dc1972cf1399 AS builder
 
 ENV CGO_ENABLED=0 \
     GOPATH=/go \
@@ -12,20 +12,20 @@ RUN set -ex \
       curl \
       git \
       make \
-      nodejs-lts \
+      nodejs-current \
       npm \
       tar \
       unzip \
- && make download_libs generate-inner generate-apidocs \
+ && make frontend_prod generate-apidocs \
  && go install \
       -ldflags "-X main.version=$(git describe --tags --always || echo dev)" \
       -mod=readonly
 
 
-FROM alpine:latest
+FROM alpine:3.22@sha256:4bcff63911fcb4448bd4fdacec207030997caf25e9bea4045fa6c8c44de311d1
 
 LABEL org.opencontainers.image.authors='Knut Ahlers <knut@ahlers.me>' \
-    org.opencontainers.image.version='1.16.0' \
+    org.opencontainers.image.version='1.17.2' \
     org.opencontainers.image.url='https://github.com/Luzifer/ots/pkgs/container/ots' \
     org.opencontainers.image.documentation='https://github.com/Luzifer/ots/wiki' \
     org.opencontainers.image.source='https://github.com/Luzifer/ots' \

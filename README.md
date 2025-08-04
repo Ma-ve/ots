@@ -8,8 +8,8 @@
 
 ## Features
 
-- AES 256bit encryption
-- Server does never get the password
+- Secrets are encrypted with AES 256bit encryption in browser
+- Server never receives the plain text secret
 - Secret is deleted on first read
 
 ## Setup
@@ -102,8 +102,6 @@ Requirements:
 Run `tilt up`, and see http://localhost:10350/ for the Tilt dashboard.
 
 Front-end application is available at http://localhost:15641/.
-
-Run `make download_libs` to propagate all required/compiled CSS and fonts.
 
 ## Localize to your own language
 
